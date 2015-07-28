@@ -1,6 +1,8 @@
 # www.foodforsoul.com
 
-## About foodforsoul.com
+## About 
 
 ## Support & Documentation
+
+## Author
 

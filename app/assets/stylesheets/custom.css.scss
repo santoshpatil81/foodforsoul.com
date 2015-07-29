@@ -25,7 +25,7 @@ $navbar-default-color: $light-orange;
 
 body {
   padding-top: 80px;
-  font-family: futura;
+  font-family: helvetica;
 }
 
 .nav_item {
@@ -118,11 +118,22 @@ span.picture {
   margin: 10px 10px 10px 10px;
 }
 
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
 
+.text_field_limit {
+  overflow: hidden;
+  max-width: 300px;
+}
 
-
-
-
+.label_field_limit {
+  max-width: 100px;
+}
 
 
 

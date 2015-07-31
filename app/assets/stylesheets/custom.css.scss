@@ -1,4 +1,6 @@
-$navbar-default-bg: #312312;
+$navbar-default-bg: #D94E67;
+$default-bg: #F2D8A7;
+
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
@@ -16,6 +18,14 @@ $navbar-default-color: $light-orange;
   letter-spacing: -1px;
   padding-top: 9px;
   font-family: futura;
+}
+
+.page_background {
+  background-color: #fff;
+}
+
+#logo_image{
+  background-image: url("images\foodforsoul_logo.png");
 }
 
 #logo:hover {
@@ -66,7 +76,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #591E23;
 }
 
 .left {
@@ -131,8 +141,19 @@ span.picture {
   max-width: 300px;
 }
 
+.trending {
+  background-color: #67BCDB;
+  padding: 2px;
+  border-radius: 5px;
+  color: #fff;
+}
+
 .label_field_limit {
   max-width: 100px;
+}
+
+.search_header {
+  margin-top: 25px;
 }
 
 

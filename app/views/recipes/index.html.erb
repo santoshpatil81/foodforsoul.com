@@ -17,11 +17,11 @@
     <div class="col-md-2">
       <section class="chef_info center">
         <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
-        <h5>Chef name: <%= recipe.chef.chefname %></h5>
+        <h5>Chef : <%= recipe.chef.chefname %></h5>
       </section>
     </div>
     
-    <div class="col-lg-6 well">
+    <div class="col-lg-9 well">
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <p><%= recipe.summary %></p>
       <% if recipe.styles.any? %>

@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "All Chefs" %>
+<%= render 'shared/page_title', title: "List of Chefs" %>
 
 <ul class="nav nav-tabs">
   <li>
@@ -17,12 +17,18 @@
 
 <% @chefs.each do |chef| %>
   <div class="row">
-    <div class="col-md-4 col-md-offset-4 center">
-      <%= link_to gravatar_for(chef, size: 200), chef_path(chef) %>
+    <div class="col-md-2 center">
+      <%= link_to gravatar_for(chef, size: 125), chef_path(chef) %>
       <p>
-        <h5>Chef name: <%= chef.chefname %></h5>
+        <h5><%= chef.chefname %></h5>
       </p>
     </div>
+    <div class="col-md-10 well well-sm">
+      <p>
+        <h5>About <%= chef.chefname %></h5>
+      </p>
+    </div>    
+    
   </div>
 
 <% end %>

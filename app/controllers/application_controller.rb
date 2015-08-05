@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  before_action :set_site_name
+  before_action :set_site_domain
+  
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -20,4 +23,14 @@ class ApplicationController < ActionController::Base
     end
   end
   
+    
+  private
+  
+  def set_site_name
+    @site_name = 'foodforsoul'
+  end
+  
+  def set_site_domain
+    @site_domain = '.com'
+  end
 end

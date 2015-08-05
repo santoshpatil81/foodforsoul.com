@@ -1,6 +1,7 @@
 $navbar-default-bg: #D94E67;
 $default-bg: #F2D8A7;
-
+$highlight_default: #009c7b;
+$background-default: #f2f0eb;
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
@@ -21,7 +22,8 @@ $navbar-default-color: $light-orange;
 }
 
 .page_background {
-  background-color: #fff;
+  background-color: $background-default;
+  color: #fff;
 }
 
 #logo_image{
@@ -36,6 +38,9 @@ $navbar-default-color: $light-orange;
 body {
   padding-top: 80px;
   font-family: helvetica;
+  font-size: 14px;
+  line-height: 1.4em;
+  background-color: $background-default;
 }
 
 .nav_item {
@@ -84,12 +89,6 @@ h2 {
   letter-spacing: .5px;
 }
 
-.footer {
-  margin-top: 25px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
 .chef_info {
   margin-top: 10px;
 }
@@ -128,25 +127,27 @@ span.picture {
   margin: 10px 10px 10px 10px;
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  height: 60px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-}
 
 .text_field_limit {
   overflow: hidden;
   max-width: 300px;
 }
 
-.trending {
-  background-color: #67BCDB;
+.trending_title {
+  background-color: $highlight_default;
   padding: 2px;
   border-radius: 5px;
-  color: #fff;
+  color: $background-default;
 }
+
+.trending_box {
+    //border: 0px solid #000;
+    //border-radius: 5px;
+    height:150px;
+    background-color: $background-default;
+    color: $highlight_default;
+}
+
 
 .label_field_limit {
   max-width: 100px;
@@ -157,4 +158,21 @@ span.picture {
 }
 
 
+/* footer */
 
+footer {
+  color: #000;
+  padding-top: 60px;
+  background-color: $background-default;
+}
+
+.header_menu_btn{
+  background-color: $navbar-default-bg;
+  color: #fff;
+  border-color: $navbar-default-bg;
+}
+
+.main_banner{
+  background-image: 'black_ssp.jpg';
+  height: 80%;
+}

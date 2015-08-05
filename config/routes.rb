@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'contact/index'
+  get '/contact', to: 'contact#index'
+
+  get 'about/index'
+  get '/about', to: 'about#index'
+
   root 'pages#home'
   
   get '/home', to: 'pages#home'

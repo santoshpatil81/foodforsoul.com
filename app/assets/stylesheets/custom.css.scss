@@ -2,7 +2,7 @@ $navbar-default-bg: #D94E67;
 $default-bg: #F2D8A7;
 $highlight_default: #009c7b;
 $background-default: #f2f0eb;
-$light-orange: #ff8c00;
+$light-orange: #ffbb00;
 $navbar-default-color: $light-orange;
 
 
@@ -15,7 +15,7 @@ $navbar-default-color: $light-orange;
   float: left;
   margin-right: 10px;
   font-size: 2em;
-  color: #fff;
+  color: $light-orange;
   letter-spacing: -1px;
   padding-top: 9px;
   font-family: futura;
@@ -134,20 +134,23 @@ span.picture {
 }
 
 .trending_title {
-  background-color: $highlight_default;
+  background-color: $default-bg;
   padding: 2px;
   border-radius: 5px;
-  color: $background-default;
+  color: $navbar-default-bg;
 }
 
 .trending_box {
-    //border: 0px solid #000;
-    //border-radius: 5px;
-    height:150px;
-    background-color: $background-default;
-    color: $highlight_default;
+  display: table;
+  min-height:150px;
+  background-color: $default-bg;
+  color: $highlight_default;
+  overflow: hidden;
+  padding: 1px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 1px solid $light_orange;
 }
-
 
 .label_field_limit {
   max-width: 100px;
@@ -160,9 +163,8 @@ span.picture {
 
 /* footer */
 
-footer {
+.footer_background {
   color: #000;
-  padding-top: 60px;
   background-color: $background-default;
 }
 
@@ -173,6 +175,8 @@ footer {
 }
 
 .main_banner{
-  background-image: 'black_ssp.jpg';
-  height: 80%;
+  border-radius: 5px;
+  border: 1px solid $light_orange;
+  height: 500px;
+  background-color: $background-default;
 }

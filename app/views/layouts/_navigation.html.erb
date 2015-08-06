@@ -41,9 +41,7 @@
                   </ul>
                 </li>
             </ul>
-            <div class="nav_item">
-              <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default" %>
-            </div>
+
             <ul class="nav_log_button">
               <li class="dropdown">
                 <%= link_to '#', class: "btn btn-default dropdown-toggle", "data-toggle" => "dropdown" do %>
@@ -66,30 +64,9 @@
             </div>
             
 
-      <div class="nav_log_button dropdown pull-right">
-        <button class="btn btn-default dropdown-toggle header_menu_btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Recipes
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu header_menu_btn" aria-labelledby="dropdownMenu1">
-          <li><a href="#">Create a new recipe</a></li>
-          <li><a href="#">View Recipes</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>  
-      
-      <%-# Search form -%>
-            <%= form_tag("/search", method: "get") do %>
-            <div class="col-lg-2 pull-right input_checkbox input search_header">
-              <%= text_field_tag(:q) %>
-            </div>
-            <div class="nav_log_button pull-right">
-              <%= submit_tag("Search Recipes") %>
-            </div>
-            <% end %>
- 
-          <% end %>  
+
+      <%= render 'layouts/header_dropdown' %>
+      <%= render 'layouts/searchrecipes' %>
+    <% end %>  
           
 </header>

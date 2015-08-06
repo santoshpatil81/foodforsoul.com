@@ -1,0 +1,10 @@
+      <%-# Search form -%>
+      <%= form_tag("/search", method: "get") do %>
+        <div class="col-lg-2 pull-right input_checkbox input search_header">
+          <%= text_field_tag(:q) %>
+        </div>
+        
+        <div class="nav_log_button pull-right">
+              <%= submit_tag("Search Recipes") %>
+        </div>
+      <% end %>

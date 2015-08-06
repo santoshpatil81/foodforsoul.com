@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "List of Chefs" %>
+<%= render 'shared/page_title', title: "All Chefs" %>
 
 <ul class="nav nav-tabs">
   <li>
@@ -15,20 +15,41 @@
   </div>
 </div>
 
+<%= will_paginate %>
+
 <% @chefs.each do |chef| %>
-  <div class="row">
+  <div class="row chef_row">
+    
     <div class="col-md-2 center">
-      <%= link_to gravatar_for(chef, size: 125), chef_path(chef) %>
+      <%= link_to gravatar_for(chef, size: 100), chef_path(chef) %>
       <p>
         <h5><%= chef.chefname %></h5>
       </p>
     </div>
-    <div class="col-md-10 well well-sm">
-      <p>
-        <h5>About <%= chef.chefname %></h5>
-      </p>
-    </div>    
     
-  </div>
+    <div class="col-md-9 well chef_about">
+      <div class="tabbable">
+        <ul class="nav nav-pills nav-justified">
+          <li><a href="#tab1" data-toggle="tab"><p><h5>About <%= chef.chefname %></h5></p>  </a></li>
+          <li><a href="#tab2" data-toggle="tab"><p><h5><%= chef.chefname %>'s Profile</h5></p></a></li>
+          <li><a href="#tab3" data-toggle="tab"><p><h5><%= chef.chefname %>'s Recipes</h5></p></a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab1">
+            <p>I'm in Section 1.</p>
+          </div>
+          <div class="tab-pane" id="tab2">
+            <p>I'm in Section 2.</p>
+          </div>  
+          <div class="tab-pane" id="tab3">
+            <p>I'm in Section 3.</p>
+          </div>  
+        </div>
+      </div>
+    </div>
 
+  </div>    
+    
 <% end %>
+
+<%= will_paginate %>

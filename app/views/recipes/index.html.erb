@@ -12,7 +12,7 @@
 <%= will_paginate %>
 
 <% @recipes.each do |recipe| %>
-  <div class="row">
+  <div class="row recipe_row">
     
     <div class="col-md-2">
       <section class="chef_info center">
@@ -21,7 +21,7 @@
       </section>
     </div>
     
-    <div class="col-lg-9 well">
+    <div class="col-lg-9 well recipe_details">
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <p><%= recipe.summary %></p>
       <% if recipe.styles.any? %>

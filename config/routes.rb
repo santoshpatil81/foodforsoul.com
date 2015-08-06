@@ -28,8 +28,13 @@ Rails.application.routes.draw do
   resources :styles, only: [:new, :create, :show]
   resources :ingredients, only: [:new, :create, :show]
   
-  
+  resources :articles do
+    member do
+      post 'like'
+    end
+      resources :reviews, only: [:new, :create, :show]
+  end  
 
-  
+  resources :books, only: [:new, :create, :show]
 
 end

@@ -1,0 +1,49 @@
+<%= render 'shared/errors', obj: @chef %>
+
+<div class="well col-md-6 col-md-offset-3">
+    <div class="row">
+        <%= form_for @chef do |chef| %>
+          <%= chef.label :name, "Username" %>
+          <%= chef.text_field :chefname %>
+          
+          <%= chef.label :email, "Email" %>
+          <%= chef.email_field :email %>
+          
+          <%= chef.label :password, "Password" %>
+          <%= chef.password_field :password %>
+    
+          <%= chef.label :password_confirmation, "Confirm Password" %>
+          <%= chef.password_field :password_confirmation %>
+    </div>
+    
+    <div class="row">
+        
+        <div class="row center">
+          <h5><b>Personal Details</b></h5>
+        </div>
+        
+          <%= chef.label :first_name, "First Name" %>
+          <%= chef.text_field :first_name %>
+          
+          <%= chef.label :last_name, "Last Name" %>
+          <%= chef.text_field :last_name %>
+          
+          <%= chef.label :restaurant, "Resturant" %>
+          <%= chef.text_field :restaurant %>
+    
+          <%= chef.label :location, "Location" %>
+          <%= chef.text_field :location %>
+          
+          <%= chef.label :speciality, "Speciality Cuisines" %>
+          <%= chef.text_area :speciality, rows: 4 %>
+    
+          <%= chef.label :favourites, "Favourite Cuisines, Dishes" %>
+          <%= chef.text_area :favourites, rows: 4 %>
+          
+          <%= chef.label :achievements, "Achievements" %>
+          <%= chef.text_area :achievements, rows: 10 %>      
+          
+          <%= chef.submit(@chef.new_record? ? 'Register' : 'Save', class: "btn") %>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 $navbar-default-bg: #D94E67;
-$default-bg: #F2D8A7;
+$default-bg: #f8f8f8;
 $highlight_default: #009c7b;
 $background-default: #f2f0eb;
 $light-orange: #ffbb00;
@@ -36,11 +36,19 @@ $navbar-default-color: $light-orange;
 }
 
 body {
+  margin:0;
+  padding:0;
+  height:100%;  
   padding-top: 80px;
   font-family: helvetica;
   font-size: 14px;
   line-height: 1.4em;
   background-color: $background-default;
+}
+
+.container {
+   min-height:100%;
+   position:relative;
 }
 
 .nav_item {
@@ -70,15 +78,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+  font-size: 1.8em;
+  letter-spacing: -1px;
   text-align: center;
+  font-family: futura;
 }
 
 h2 {
   font-size: 1.2em;
-  margin-bottom: 30px;
+  letter-spacing: 2px;
   text-align: center;
   font-weight: normal;
   color: #591E23;
@@ -138,6 +146,8 @@ span.picture {
   padding: 2px;
   border-radius: 5px;
   color: $navbar-default-bg;
+  font-size: 1.3em;
+  font-family: futura;
 }
 
 .trending_box {
@@ -168,6 +178,11 @@ span.picture {
   background-color: $background-default;
 }
 
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
 .header_menu_btn{
   background-color: $navbar-default-bg;
   color: #fff;
@@ -177,6 +192,28 @@ span.picture {
 .main_banner{
   border-radius: 5px;
   border: 1px solid $light_orange;
-  height: 500px;
+  height: 490px;
   background-color: $background-default;
+}
+
+.chef_about{
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid $light_orange;  
+}
+
+.recipe_details{
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid $light_orange;  
+}
+
+.recipe_row {
+  padding: 5px;
+  height: 300px;
+}
+
+.chef_row {
+  padding: 5px;
+  height: 300px;
 }
